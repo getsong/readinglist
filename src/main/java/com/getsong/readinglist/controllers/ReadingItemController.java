@@ -7,6 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Date;
+import java.util.List;
 
 /**
  * Controller for Reading List Items
@@ -27,9 +28,9 @@ public class ReadingItemController {
 
   @GetMapping
   @ResponseBody
-  public String getAllItems() {
+  public List<ReadingItem> getAllItems() {
     log.info("getting all items");
-    return "all items are here";
+    return readingItemDao.getAll();
   }
 
   @PostMapping

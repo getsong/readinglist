@@ -3,6 +3,8 @@ package com.getsong.readinglist.daos;
 import com.getsong.readinglist.models.ReadingItem;
 import org.springframework.stereotype.Repository;
 
+import java.util.List;
+
 /**
  * Reading Item DAO
  *
@@ -16,6 +18,11 @@ public class ReadingItemDao implements Dao<ReadingItem> {
 
   public ReadingItemDao(ReadingItemRepo readingItemRepo) {
     this.readingItemRepo = readingItemRepo;
+  }
+
+  @Override
+  public List<ReadingItem> getAll() {
+    return readingItemRepo.findAll();
   }
 
   @Override
