@@ -18,6 +18,7 @@ import java.util.List;
 @Controller
 @Slf4j
 @RequestMapping("/items")
+@CrossOrigin
 public class ReadingItemController {
 
   private Dao<ReadingItem> readingItemDao;
