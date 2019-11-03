@@ -1,7 +1,7 @@
 <template>
   <v-container>
     <v-layout wrap>
-      <v-flex v-for="(item, index) in list" :key="index">
+      <v-flex xs4 v-for="(item, index) in list" :key="index">
         <a :href="item.url">
           {{ item.url }}
         </a>

@@ -9,4 +9,13 @@ function get(url) {
     });
 }
 
-export default { get };
+function post(url) {
+  console.log("in get");
+  return axios.post("http://localhost:5678/items", { url: url })
+    .then(response => {
+      console.log(response.data);
+      return response.data;
+    });
+}
+
+export default { get, post };
